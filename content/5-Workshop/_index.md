@@ -5,27 +5,22 @@ weight: 5
 chapter: false
 pre: " <b> 5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+### Overview
 
-# Secure Hybrid Access to S3 using VPC Endpoints
+This workshop involves building an automated cloud-based platform for malware analysis and detection on **Amazon Web Services (AWS)** using a serverless architecture. The system allows users to upload files for inspection via a web interface, subsequently automating the analysis and processing workflow and returning results within the cloud environment.
 
-#### Overview
+To construct the complete system, various AWS services are integrated to handle specific functions. The user interface is developed using React, with authentication managed by Amazon Cognito. Files are stored on Amazon S3, and the entire processing workflow is executed using AWS Lambda in conjunction with Amazon SQS, Amazon DynamoDB, and AWS Step Functions, adhering to a serverless architecture.
 
-**AWS PrivateLink** provides private connectivity to AWS services from VPCs and your on-premises networks, without exposing your traffic to the Public Internet.
+Additionally, the system implements **Continuous Integration and Continuous Deployment (CI/CD)** pipelines using AWS CodeBuild and AWS CodePipeline to automate application build and deployment processes. Security mechanisms—including IAM, AWS WAF, AWS Secrets Manager, AWS KMS, AWS CloudTrail, and AWS Config—are also configured to enhance system protection, manage access rights, secure sensitive information, and monitor all AWS resource activities.
 
-In this lab, you will learn how to create, configure, and test VPC endpoints that enable your workloads to reach AWS services without traversing the Public Internet.
+Finally, the **Amazon VPC Endpoint** solution was implemented to establish a private connection between Amazon Virtual Private Cloud (Amazon VPC) and Amazon S3, enabling system resources to access AWS services via the internal network—bypassing the public Internet—thereby enhancing the security and performance of the entire platform.
 
-You will create two types of endpoints to access Amazon S3: a Gateway VPC endpoint, and an Interface VPC endpoint. These two types of VPC endpoints offer different benefits depending on if you are accessing Amazon S3 from the cloud or your on-premises location
-+ **Gateway** - Create a gateway endpoint to send traffic to Amazon S3 or DynamoDB using private IP addresses.You route traffic from your VPC to the gateway endpoint using route tables.
-+ **Interface** - Create an interface endpoint to send traffic to endpoint services that use a Network Load Balancer to distribute traffic. Traffic destined for the endpoint service is resolved using DNS.
 
-#### Content
+### Contents
 
-1. [Workshop overview](5.1-Workshop-overview)
-2. [Prerequiste](5.2-Prerequiste/)
-3. [Access S3 from VPC](5.3-S3-vpc/)
-4. [Access S3 from On-premises](5.4-S3-onprem/)
-5. [VPC Endpoint Policies (Bonus)](5.5-Policy/)
-6. [Clean up](5.6-Cleanup/)
+1. [Workshop Overview](5.1-Workshop-overview/)
+2. [Web Frontend Developer](5.2-Web-Frontend-Developer/)
+3. [Serverless Backend Developer](5.3-Serverless-Backend-Developer/)
+4. [Data](5.4-Data/)
+5. [AI Security Analyst & Web Admin](5.5-AI-Security-Analyst-%26-Web-Admin/)
+6. [Perimeter Security & Cloud Admin](5.6-Perimeter%20Security%20%26%20Cloud%20Admin/)

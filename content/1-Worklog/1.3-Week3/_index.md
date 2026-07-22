@@ -1,57 +1,32 @@
 ---
 title: "Week 3 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-05-04
+weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 3 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Learn Auto Scaling and Elastic Load Balancing (ELB).
+* Learn how to use DynamoDB - AWS NoSQL database.
+* Practice deploying applications with Load Balancer and Auto Scaling.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+
+| Day | Task | Start Date | Completion Date | Reference Material |
+|-----|------|------------|-----------------|-------------------|
+| 2 | Reviewed VPC, Security Group knowledge from Week 1-2. Learned about Auto Scaling: why we need automatic instance scaling. Learned about ELB: difference between Application LB vs Network LB vs Gateway LB | 04/05/2026 | 04/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 3 | Created Launch Template with EC2 (Amazon Linux 2 AMI). Configured User Data to auto-install Apache. Created Target Group for Load Balancer. Created Application Load Balancer (ALB) with Security Group open port 80/443. Initialized Auto Scaling Group with min=1, max=3 instances. Configured Scaling Policy based on CPU Utilization target 70%. Tested Auto Scaling with load test | 05/05/2026 | 05/05/2026 | <https://000006.awsstudygroup.com/> |
+| 4 | Accessed DynamoDB Console. Created new Table with Partition Key (user_id). Selected Capacity Mode (On-Demand or Provisioned). Added items to table (user_id, name, email). Created Global Secondary Index (GSI) to query by email. Enabled Point-in-time Recovery (PITR). Created On-Demand Backup for table. Connected DynamoDB from Lambda function | 06/05/2026 | 06/05/2026 | <https://000060.awsstudygroup.com/> |
+| 5 | Created RDS Instance with MySQL (t2.micro). Enabled Multi-AZ Deployment for high availability. Enabled Encryption for RDS Instance. Created Read Replica to distribute read operations. Connected RDS from EC2 using MySQL Client. Created custom Parameter Group (max_connections). Created Option Group to enable BACKUP. Created Secret to store RDS username/password in Secrets Manager. Configured Lambda to read secret from Secrets Manager instead of hardcoding credentials | 07/05/2026 | 07/05/2026 | <https://000005.awsstudygroup.com/> |
+| 6 | Designed VPC with 2 Availability Zones (ap-southeast-1a, ap-southeast-1b). Created Public Subnet in each AZ for ALB and Private Subnet for EC2. Created NAT Gateway in Public Subnet so Private subnet has internet access. Launched EC2 instances in Auto Scaling Group. Configured Application Load Balancer to distribute traffic across 2 AZs. Created RDS with Multi-AZ in Private Subnet ensuring database is always available. Deployed web application to EC2. Tested failover by terminating one instance and verified website still works via ALB DNS | 08/05/2026 | 08/05/2026 | <https://000101.awsstudygroup.com/> |
 
 
 ### Week 3 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Successfully understood and deployed Auto Scaling Group with Load Balancer.
+* Created and managed DynamoDB Table, used GSI and backup.
+* Deployed Web Application with High Availability (Multi-AZ).
+* Configured RDS Multi-AZ and Read Replica.
+* Used Secrets Manager to manage credentials securely.

@@ -6,28 +6,21 @@ chapter: false
 pre: " <b> 5. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+### Tổng quan
 
+Trong workshop này, tiến hành xây dựng một **nền tảng Cloud phân tích và phát hiện mã độc tự động trên nền tảng Amazon Web Services (AWS)** theo kiến trúc Serverless. Hệ thống cho phép người dùng tải tệp cần kiểm tra thông qua giao diện Web, sau đó tự động thực hiện quá trình phân tích, xử lý và trả về kết quả trên môi trường điện toán đám mây.
 
-# Đảm bảo truy cập Hybrid an toàn đến S3 bằng cách sử dụng VPC endpoint
+Để xây dựng hệ thống hoàn chỉnh, nhiều dịch vụ của AWS được tích hợp nhằm đảm nhiệm các chức năng khác nhau. Giao diện người dùng được phát triển bằng React và xác thực thông qua Amazon Cognito. Các tệp được lưu trữ trên Amazon S3 và toàn bộ quy trình xử lý được thực hiện bằng AWS Lambda kết hợp với Amazon SQS, Amazon DynamoDB và AWS Step Functions theo kiến trúc Serverless.
 
-#### Tổng quan
+Bên cạnh đó, hệ thống còn triển khai quy trình **Continuous Integration và Continuous Deployment (CI/CD)** bằng AWS CodeBuild và AWS CodePipeline nhằm tự động hóa quá trình xây dựng và triển khai ứng dụng. Đồng thời, các cơ chế bảo mật như IAM, AWS WAF, AWS Secrets Manager, AWS KMS, AWS CloudTrail và AWS Config cũng được cấu hình để tăng cường khả năng bảo vệ hệ thống, quản lý quyền truy cập, lưu trữ thông tin nhạy cảm và giám sát toàn bộ hoạt động của các tài nguyên trên AWS.
 
-**AWS PrivateLink** cung cấp kết nối riêng tư đến các dịch vụ aws từ VPCs hoặc trung tâm dữ liệu (on-premise) mà không làm lộ lưu lượng truy cập ra ngoài public internet.
+Cuối cùng, giải pháp **Amazon VPC Endpoint** được triển khai để xây dựng kết nối riêng tư giữa Amazon Virtual Private Cloud (Amazon VPC) và Amazon S3, giúp các tài nguyên trong hệ thống truy cập dịch vụ AWS thông qua mạng nội bộ mà không cần đi qua Internet công cộng, từ đó nâng cao tính bảo mật và hiệu năng của toàn bộ nền tảng.
 
-Trong bài lab này, chúng ta sẽ học cách tạo, cấu hình, và kiểm tra VPC endpoints để cho phép workload của bạn tiếp cận các dịch vụ AWS mà không cần đi qua Internet công cộng.
-
-Chúng ta sẽ tạo hai loại endpoints để truy cập đến Amazon S3: gateway vpc endpoint và interface vpc endpoint. Hai loại vpc endpoints này mang đến nhiều lợi ích tùy thuộc vào việc bạn truy cập đến S3 từ môi trường cloud hay từ trung tâm dữ liệu (on-premise).
-+ **Gateway** - Tạo gateway endpoint để gửi lưu lượng đến Amazon S3 hoặc DynamoDB using private IP addresses. Bạn điều hướng lưu lượng từ VPC của bạn đến gateway endpoint bằng các bảng định tuyến (route tables)
-+ **Interface** - Tạo interface endpoint để gửi lưu lượng đến các dịch vụ điểm cuối (endpoints) sử dụng Network Load Balancer để phân phối lưu lượng. Lưu lượng dành cho dịch vụ điểm cuối được resolved bằng DNS.
-
-#### Nội dung
+### Nội dung
 
 1. [Tổng quan về workshop](5.1-Workshop-overview/)
-2. [Chuẩn bị](5.2-Prerequiste/)
-3. [Truy cập đến S3 từ VPC](5.3-S3-vpc/)
-4. [Truy cập đến S3 từ TTDL On-premises](5.4-S3-onprem/)
-5. [VPC Endpoint Policies (làm thêm)](5.5-Policy/)
-6. [Dọn dẹp tài nguyên](5.6-Cleanup/)
+2. [Web Frontend Developer](5.2-Web-Frontend-Developer/)
+3. [Serverless Backend Developer](5.3-Serverless-Backend-Developer/)
+4. [Data](5.4-Data/)
+5. [AI Security Analyst & Web Admin](5.5-AI-Security-Analyst-%26-Web-Admin/)
+6. [Perimeter Security & Cloud Admin](5.6-Perimeter%20Security%20%26%20Cloud%20Admin/)

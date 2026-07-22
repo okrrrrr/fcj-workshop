@@ -1,57 +1,31 @@
 ---
 title: "Week 8 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-06-08
+weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 8 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Learn Data & Analytics: Redshift, Glue, Athena.
+* Learn how to build Data Lake with Lake Formation.
+* Practice ETL and Business Intelligence with QuickSight.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+
+| Day | Task | Start Date | Completion Date | Reference Material |
+|-----|------|------------|-----------------|-------------------|
+| 2 | Reviewed Route 53, CloudFront from Week 7. Learned about Amazon Redshift: clusters, nodes, RA3 architecture. Understood Redshift Spectrum to query data directly from S3. Learned Redshift WLM (Workload Management) to optimize queries | 08/06/2026 | 08/06/2026 | <https://docs.aws.amazon.com/redshift/latest/gsg/new-user.html> |
+| 3 | Created Redshift Cluster with dc2.large node. Configured VPC Security Group for Redshift (open port 5439). Connected cluster using SQL client like VS Code with extension. Created database and schema to organize tables. Created tables with distribution style (KEY, ALL, EVEN) and sort keys to optimize query performance. Loaded data from S3 using COPY command for fast data import. Ran queries to verify data loaded correctly. Monitored cluster performance in Console to track CPU and storage | 09/06/2026 | 09/06/2026 | <https://docs.aws.amazon.com/redshift/latest/dg/tutorial-loading-data.html> |
+| 4 | Created Glue Crawler to discover schema from S3 data automatically. Checked Data Catalog after crawler runs to see tables created. Created Glue Job with PySpark to transform data between formats. Wrote transformation logic like filter, join, aggregate to clean data. Configured job bookmark for incremental loading to only process new data. Ran Glue Job and monitored execution in CloudWatch Logs. Scheduled job to run automatically with Trigger at predetermined times. Used Glue Studio visual editor to create ETL jobs more easily. Created ETL job using drag-and-drop interface instead of writing code. Previewed data transformation to verify logic before actual run | 10/06/2026 | 10/06/2026 | <https://000035.awsstudygroup.com/> |
+| 5 | Accessed Athena Console. Opened Query Editor to write SQL queries. Created database: CREATE DATABASE analytics to organize tables. Created table with SerDe definition to specify data format (JSON, Parquet, etc.) for S3 data. Ran SELECT query to verify data is readable. Created views for common queries to reuse logic. Used CTE (Common Table Expressions) to write complex queries more readably. Exported query results to S3 to share data with team. Registered QuickSight account (enterprise version). Created Dataset from Athena to connect with data source. Created Analysis with various charts (bar, line, pie) to visualize data. Created Dashboard and shared with team to collaborate | 11/06/2026 | 11/06/2026 | <https://000072.awsstudygroup.com/> |
+| 6 | Enabled Lake Formation and set up admin permissions. Registered S3 bucket as Data Lake location to centralize storage. Created database and tables in Lake Formation with fine-grained permissions. Configured LF-tags for data governance and classification. Granted permissions for IAM users/roles to control access. Tested row-level security to verify users only see permitted data. Designed Data Lake architecture with 3 layers: bronze (raw data), silver (cleaned data), gold (curated/business-ready). Created S3 bucket structure following lake formation pattern. Ran Glue Crawler to catalog raw data from bronze layer. Created Glue Job transform data from bronze to silver to clean and standardize. Created aggregation queries in Athena for reporting. Built QuickSight dashboard from curated data to present insights | 12/06/2026 | 12/06/2026 | <https://aws.amazon.com/lake-formation/> |
 
 
 ### Week 8 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Created and managed Redshift Cluster for data warehousing.
+* Used AWS Glue to build ETL pipelines.
+* Queried data serverlessly with Amazon Athena.
+* Built Data Lake with Lake Formation and QuickSight dashboards.

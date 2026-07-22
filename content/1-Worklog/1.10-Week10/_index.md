@@ -1,57 +1,31 @@
 ---
 title: "Week 10 Worklog"
-date: 2024-01-01
-weight: 2
+date: 2026-06-22
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 10 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Learn Cost Optimization: Cost Explorer, Budgets, Savings Plans.
+* Learn how to monitor and control AWS costs.
+* Practice right-sizing and optimization strategies.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+
+| Day | Task | Start Date | Completion Date | Reference Material |
+|-----|------|------------|-----------------|-------------------|
+| 2 | Reviewed Security Hub, IAM Identity Center from Week 9. Learned about AWS Cost Explorer: cost reports, charts to visualize spending. Understood cost allocation tags and usage by service to allocate costs. Learned Reserved Instances vs On-Demand vs Savings Plans tradeoffs | 22/06/2026 | 22/06/2026 | <https://docs.aws.amazon.com/cost-management/latest/userguide/ce-getting-started.html> |
+| 3 | Accessed Cost Explorer Console to view costs. Viewed Cost & Usage by Service to identify top 5 most expensive services. Filtered by tag (Environment, Project, Team) to analyze costs by group. Viewed cost trend over time (daily, monthly) to understand patterns. Created custom cost report with specific filters to analyze specific areas. Downloaded report as CSV/Excel to share with team. Scheduled report delivery via email to receive regular updates. Enabled CUR (Cost & Usage Report) to have detailed cost data. Configured report prefix and s3 bucket to store reports. Set time granularity (Hourly) to have detailed breakdowns. Enabled resource IDs to track individual resource costs | 23/06/2026 | 23/06/2026 | <https://aws.amazon.com/aws-cost-management/aws-cost-explorer/getting-started/> |
+| 4 | Accessed Budgets Console to set spending limits. Created Cost Budget with threshold ($100/month) to limit spending. Configured alert thresholds (50%, 80%, 100%) to receive early warnings. Added SNS topic for alerts to notify team when approaching limits. Created Usage Budget (EC2 hours, Lambda invocations) to track usage. Created RI Utilization Budget to track Reserved Instance coverage. Verified alerts trigger at correct threshold. Enabled Cost Anomaly Detection to identify unusual spending patterns. Created subscription (SNS topic) to receive anomaly alerts. Created monitor (single service or entire account) to track specific areas. Set sensitivity level to control alert frequency | 24/06/2026 | 24/06/2026 | <https://000007.awsstudygroup.com/> |
+| 5 | Accessed Trusted Advisor Dashboard to view recommendations. Reviewed Cost Optimization checks to identify savings opportunities. Reviewed Security checks (MFA, IAM, public S3) to improve security posture. Reviewed Fault Tolerance checks to ensure high availability. Reviewed Performance checks to optimize resource usage. Downloaded TA report to share with stakeholders. Enabled Compute Optimizer to get recommendations. Reviewed EC2 instance recommendations to right-size instances. Reviewed EBS volume recommendations to optimize storage. Reviewed Lambda function recommendations to optimize serverless. Exported recommendations as CSV to plan implementation | 25/06/2026 | 25/06/2026 | <https://aws.amazon.com/trustedadvisor/getting-started/> |
+| 6 | Analyzed current usage patterns in Cost Explorer to understand baseline. Calculated potential savings with Savings Plans to compare options. Purchased Compute Savings Plans (1-year, no upfront) to lock in savings. Reviewed RI recommendations from Trusted Advisor to consider Reserved Instances. Compared Savings Plans vs RI tradeoff to choose best option. Tagged all resources with consistent tagging strategy to enable cost allocation. Enabled CUR with resource IDs to track detailed costs. Set up Cost Budgets with alerts to prevent overspending. Reviewed Compute Optimizer recommendations to right-size resources. Implemented Reserved Instances/Savings Plans to reduce costs. Scheduled monthly cost review meetings to continuously optimize | 26/06/2026 | 26/06/2026 | <https://000042.awsstudygroup.com/> |
 
 
 ### Week 10 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Used Cost Explorer to analyze AWS costs.
+* Created Budgets and alerts to monitor spending.
+* Applied right-sizing recommendations from Compute Optimizer.
+* Deployed Savings Plans and Reserved Instances to save costs.

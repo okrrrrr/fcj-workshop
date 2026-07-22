@@ -1,59 +1,31 @@
 ---
 title: "Worklog Tuần 5"
-date: 2024-01-01
-weight: 1
+date: 2026-05-18
+weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 5:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tìm hiểu Docker và Container trên AWS.
+* Học cách triển khai ứng dụng container với ECS và EKS.
+* Thực hành Infrastructure as Code với CloudFormation và CDK.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Công việc thực hiện trong tuần:
+
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+|-----|------|------------|-----------------|-------------------|
+| 2 | Ôn tập CloudWatch, CloudTrail từ tuần 4. Tìm hiểu Docker cơ bản: images, containers, registries. Hiểu Dockerfile và cách build image. Tìm hiểu Docker Compose để quản lý multi-container | 18/05/2026 | 18/05/2026 | <https://docs.docker.com/get-started/introduction/> |
+| 3 | Cài đặt Docker Desktop trên Windows. Kiểm tra version docker. Tạo Dockerfile đơn giản với nginx image. Build image: docker build -t my-app. Run container: docker run -d -p 8080:80 my-app. Push image lên Docker Hub để share với team. Tạo docker-compose.yml với web app và database services. Chạy docker-compose up -d để khởi tạo tất cả containers. Kiểm tra containers đang chạy với docker ps | 19/05/2026 | 19/05/2026 | <https://000067.awsstudygroup.com/3-containersanddocker/> |
+| 4 | Tạo ECR Repository để lưu trữ Docker images private. Push Docker image lên ECR sử dụng AWS credentials. Tạo ECS Cluster với Fargate launch type (serverless container). Tạo Task Definition với container configuration. Tạo Service với Load Balancer để distribute traffic. Cấu hình Security Group cho container. Kiểm tra service đang chạy và xem logs trong CloudWatch. Scale service bằng cách tăng desired count lên 2 | 20/05/2026 | 20/05/2026 | <https://000016.awsstudygroup.com/> |
+| 5 | Tạo EKS Cluster với eksctl command line tool. Cấu hình kubeconfig: aws eks update-kubeconfig --name my-cluster. Tạo Node Group với EC2 instances để run pods. Deploy sample app: kubectl apply -f deployment.yaml. Tạo Service để expose app ra ngoài. Kiểm tra pods: kubectl get pods. Scale deployment: kubectl scale deployment my-app --replicas=3. Cài đặt CDK: npm install -g aws-cdk. Tạo new project: cdk init app --language python. Viết code Python định nghĩa infrastructure. Deploy S3 bucket: cdk deploy | 21/05/2026 | 21/05/2026 | <https://www.eksworkshop.com/> |
+| 6 | Viết CloudFormation Template (YAML) định nghĩa VPC với subnets. Thêm EC2 Instance và Security Group vào template. Thêm S3 Bucket với bucket policy. Upload template lên CloudFormation Console. Create Stack và theo dõi creation progress. Kiểm tra Outputs sau khi stack hoàn thành để lấy resource IDs. Tạo Docker image cho web application với multi-stage build. Push image lên Amazon ECR. Tạo ECS Cluster với Fargate. Deploy container với ALB integration để route HTTP traffic. Test ứng dụng qua ALB DNS | 22/05/2026 | 22/05/2026 | <https://000067.awsstudygroup.com/2-prerequiste/2.1-createcloudformation/> |
 
 
 ### Kết quả đạt được tuần 5:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Hiểu và sử dụng Docker để build, run và push container images.
+* Triển khai ứng dụng container với Amazon ECS Fargate.
+* Tạo Kubernetes cluster với Amazon EKS và deploy ứng dụng.
+* Viết Infrastructure as Code với CloudFormation và CDK.

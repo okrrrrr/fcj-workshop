@@ -1,59 +1,31 @@
 ---
 title: "Worklog Tuần 11"
-date: 2024-01-01
-weight: 2
+date: 2026-06-29
+weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 11:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Hoàn thành project AWS Malware Detection (React + AWS Cognito + S3).
+* Áp dụng AWS Well-Architected Framework để review architecture.
+* Chuẩn bị demo project và báo cáo cuối khóa.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Công việc thực hiện trong tuần:
+
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+|-----|------|------------|-----------------|-------------------|
+| 2 | Ôn tập Cost Optimization từ tuần 10. Thiết kế project architecture cho Malware Detection app. Setup AWS Cognito User Pool với App Client sử dụng USER_PASSWORD_AUTH flow cho authentication. Configure Identity Pool để map Cognito users với IAM roles cho secure S3 access | 29/06/2026 | 29/06/2026 | <https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html> |
+| 3 | Initialize React project với Vite + TypeScript cho frontend hiện đại. Configure Tailwind CSS cho styling. Cài AWS SDK packages (cognito-identity-provider, client-s3, s3-request-presigner). Tạo aws.ts config file để manage AWS credentials từ environment variables. Implement cognitoService.ts với các functions signUp, signIn, signOut, forgotPassword, confirmSignUp, refreshTokens sử dụng USER_PASSWORD_AUTH flow | 30/06/2026 | 30/06/2026 | <https://docs.amplify.aws/react/build-a-backend/auth/> |
+| 4 | Tạo tokenService.ts với TokenManager class để handle token storage (sessionStorage + cookies), auto token refresh trước khi hết hạn, token validation, và listener pattern cho auth state changes. Tạo AuthContext.tsx với React Context API để manage auth state (user, isLoading, error) và cung cấp signUp, signIn, signOut, forgotPassword methods. Implement LoginPage, RegisterPage, ForgotPasswordPage với form validation và error handling cho từng auth flow | 01/07/2026 | 01/07/2026 | <https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-using-tokens.html> |
+| 5 | Tạo S3 bucket với CORS configuration cho cross-origin requests. Implement s3Service.ts với các functions getPresignedUploadUrl, getPresignedDownloadUrl, uploadFileToS3 (sử dụng XHR cho progress tracking), deleteFileFromS3, listFiles, checkFileExists. Tạo FileUpload component với drag & drop interface, file validation (size limit 100MB, file types), progress bar, file list display, và security info section. Tạo DashboardPage với stats cards (total files, safe, malware, scanning), tab navigation (Upload/History), và analysis result display | 02/07/2026 | 02/07/2026 | <https://docs.aws.amazon.com/AmazonS3/latest/userguide/upload-objects.html> |
+| 6 | Responsive design với Tailwind CSS cho mobile/desktop. Error handling và loading states across all pages. Performance optimization với lazy loading patterns. Security hardening (input validation, file type sanitization, XSS protection). Tạo AWS_SETUP_GUIDE.md documentation với step-by-step Cognito và S3 setup instructions. Chuẩn bị README.md với project overview, installation, configuration, và architecture. Vẽ architecture diagram thể hiện React frontend kết nối với AWS Cognito và S3 | 03/07/2026 | 03/07/2026 | <https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html> |
 
 
 ### Kết quả đạt được tuần 11:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Hoàn thành ứng dụng React với AWS Cognito authentication (USER_PASSWORD_AUTH flow).
+* Tích hợp AWS S3 cho file upload/download với presigned URLs và progress tracking.
+* Áp dụng AWS Well-Architected Framework để review architecture.
+* Chuẩn bị demo project với architecture diagram và presentation slides.
