@@ -25,16 +25,10 @@ jobs:
       - name: Build website
         run: hugo --minify
 
-      - name: Copy static images
-        run: |
-          mkdir -p public/images
-          cp -r static/images/* public/images/
-          touch public/.nojekyll
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          publish_branch: gh-pages # <- đảm bảo đúng tên nhánh bạn dùng để deploy
-          force_orphan: false
+          publish_branch: gh-pages
+          force_orphan: true
