@@ -24,3 +24,9 @@ Finally, the **Amazon VPC Endpoint** solution was implemented to establish a pri
 4. [Data](5.4-Data/)
 5. [AI Security Analyst & Web Admin](5.5-AI-Security-Analyst-%26-Web-Admin/)
 6. [Perimeter Security & Cloud Admin](5.6-Perimeter%20Security%20%26%20Cloud%20Admin/)
+
+### Google Drive Link
+
+To access the workshop materials and resources, please visit our Google Drive:
+
+[Access Workshop Documents on Google Drive](https://drive.google.com/drive/folders/1HFBn3O3yVfNxi-RjN88kXpvAUjCLCXKk)

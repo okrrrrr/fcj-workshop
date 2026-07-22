@@ -24,3 +24,9 @@ Cuối cùng, giải pháp **Amazon VPC Endpoint** được triển khai để x
 4. [Data](5.4-Data/)
 5. [AI Security Analyst & Web Admin](5.5-AI-Security-Analyst-%26-Web-Admin/)
 6. [Perimeter Security & Cloud Admin](5.6-Perimeter%20Security%20%26%20Cloud%20Admin/)
+
+### Link Google Drive
+
+Để truy cập tài liệu và tài nguyên của workshop, vui lòng truy cập Google Drive của chúng tôi:
+
+[Truy cập Tài liệu Workshop trên Google Drive](https://drive.google.com/drive/folders/1HFBn3O3yVfNxi-RjN88kXpvAUjCLCXKk)
