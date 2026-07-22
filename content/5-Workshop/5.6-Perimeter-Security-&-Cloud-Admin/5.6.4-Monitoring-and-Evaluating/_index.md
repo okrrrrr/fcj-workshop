@@ -12,7 +12,7 @@ After configuring security mechanisms, the next step is to deploy **AWS CloudTra
 
 Access the **AWS CloudTrail** service, select **Create trail**, and proceed to create a new trail named **main-project-trail**.
 
-![](/images/5-Workshop/5.6-Perimeter-Security/image-10.png)
+![](/fcj-workshop/images/5-Workshop/5.6-Perimeter-Security-&-Cloud-Admin/image-10.png)
 
 CloudTrail automatically records administrative actions, configuration changes, and events occurring across AWS services. All audit logs are stored in Amazon S3 to facilitate monitoring, auditing, and analysis as needed.
 
@@ -22,7 +22,7 @@ Next, deploy **AWS Config** to continuously monitor the configuration state of s
 
 In the AWS Config interface, configure the **Configuration Recorder** to capture all configuration changes across AWS services.
 
-![](/images/5-Workshop/5.6-Perimeter-Security/image-11.png)
+![](/fcj-workshop/images/5-Workshop/5.6-Perimeter-Security-&-Cloud-Admin/image-11.png)
 
 Once the Configuration Recorder is activated, AWS Config automatically tracks resource changes and evaluates compliance levels based on established rules.
 
@@ -32,7 +32,7 @@ After completing the configuration, check the evaluation results for the rules i
 
 In the system, the **s3-bucket-public-read-prohibited** rule is used to verify that public access to Amazon S3 buckets is prevented.
 
-![](/images/5-Workshop/5.6-Perimeter-Security/image-12.png)
+![](/fcj-workshop/images/5-Workshop/5.6-Perimeter-Security-&-Cloud-Admin/image-12.png)
 
 The result shows a **Compliant** status, indicating that the S3 buckets meet security requirements and do not allow unauthorized public read access.
 
@@ -40,7 +40,7 @@ The result shows a **Compliant** status, indicating that the S3 buckets meet sec
 
 Finally, access the **AWS Config Dashboard** to view an overview of the compliance status for all resources in the system.
 
-![](/images/5-Workshop/5.6-Perimeter-Security/image-13.png)
+![](/fcj-workshop/images/5-Workshop/5.6-Perimeter-Security-&-Cloud-Admin/image-13.png)
 
 The dashboard provides information such as:
 

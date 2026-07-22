@@ -1,4 +1,4 @@
----
+﻿---
 title : "System Testing"
 date : 2024-01-01
 weight : 4
@@ -12,7 +12,7 @@ After configuring the AWS services and deploying the entire backend, launch the 
 
 Launch the web application and backend, then access the system's main interface to perform a file upload.
 
-![](/images/5-Workshop/5.3-Serverless-Backend-Developer/image-20.png)
+![](/fcj-workshop/images/5-Workshop/5.3-Serverless-Backend-Developer/image-20.png)
 
 ---
 
@@ -24,7 +24,7 @@ Immediately after the file is successfully uploaded, Amazon S3 automatically tri
 
 During processing, the file status is displayed as **Scanning**.
 
-![](/images/5-Workshop/5.3-Serverless-Backend-Developer/image-21.png)
+![](/fcj-workshop/images/5-Workshop/5.3-Serverless-Backend-Developer/image-21.png)
 
 ---
 
@@ -34,7 +34,7 @@ Once AWS Step Functions completes the entire processing workflow, the system upd
 
 If no malware or anomalies are detected, the result is displayed as **Safe** on the user interface.
 
-![](/images/5-Workshop/5.3-Serverless-Backend-Developer/image-22.png)
+![](/fcj-workshop/images/5-Workshop/5.3-Serverless-Backend-Developer/image-22.png)
 
 ---
 

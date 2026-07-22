@@ -1,4 +1,4 @@
----
+﻿---
 title : "Building a Serverless Backend"
 date : 2024-01-01
 weight : 3
@@ -21,4 +21,4 @@ To facilitate implementation and monitoring, the **Building a Serverless Backend
 - **5.3.3. Building AWS Step Functions:** Create a State Machine, configure IAM roles, and build a workflow to orchestrate Lambda functions for the automated analysis process.
 - **5.3.4. System Testing:** Launch the system, upload files via the website, monitor processing status, and verify results in Amazon DynamoDB and the user interface.
 
-![Serverless Backend](/images/5-Workshop/5.3-Serverless-Backend-Developer/image.png)
+![Serverless Backend](/fcj-workshop/images/5-Workshop/5.3-Serverless-Backend-Developer/image.png)

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Bản đề xuất"
 date: 2024-01-01
 weight: 2
@@ -40,7 +40,7 @@ Giải pháp cung cấp một môi trường phân tích tự động hóa giúp
 ### 3. Kiến trúc giải pháp  
 Hệ thống sử dụng kiến trúc phân lớp hướng sự kiện và Serverless đảm bảo tính cô lập và hiệu năng cao. Dữ liệu từ Web client đi qua Cognito xác thực, gọi Lambda qua API Gateway để lấy Presigned URL, sau đó tải trực tiếp lên S3 bucket thô. Sự kiện tệp tin mới kích hoạt SQS xếp hàng và Step Functions điều phối việc khởi động máy ảo EC2 trong VPC Sandbox không có Internet để mô hình AI quét tệp an toàn qua VPC Endpoint kết nối S3 và ghi log kết quả quét vào DynamoDB.  
 
-![Architecture Diagram](/images/2-Proposal/architecture-diagram.png)  
+![Architecture Diagram](/fcj-workshop/images/2-Proposal/architecture-diagram.png)  
 
 
 *Dịch vụ AWS sử dụng*  

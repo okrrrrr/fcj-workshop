@@ -1,4 +1,4 @@
----
+﻿---
 title : "Setting up AWS CodeBuild"
 date : 2024-01-01
 weight : 3
@@ -12,7 +12,7 @@ Once the source code has been pushed to GitHub and the **buildspec.yml** file co
 
 Navigate to the **AWS CodeBuild** service, select **Create build project**, and enter basic information such as the Project name, Source Provider, and the GitHub repository to be used.
 
-![](/images/5-Workshop/5.4-Data/image-12.png)
+![](/fcj-workshop/images/5-Workshop/5.4-Data/image-12.png)
 
 ### Configuring the Build Environment
 
@@ -20,7 +20,7 @@ Next, configure the execution environment for AWS CodeBuild. In this section, se
 
 Additionally, select the **On-demand** mode so that CodeBuild automatically initializes the environment when a build request is made, helping to optimize usage costs.
 
-![](/images/5-Workshop/5.4-Data/image-13.png)
+![](/fcj-workshop/images/5-Workshop/5.4-Data/image-13.png)
 
 The key parameters to configure include:
 
@@ -38,7 +38,7 @@ After completing the environment configuration, AWS CodeBuild will use these par
 
 After completing the configuration, create the project and verify the operational status of AWS CodeBuild.
 
-![](/images/5-Workshop/5.4-Data/image-14.png)
+![](/fcj-workshop/images/5-Workshop/5.4-Data/image-14.png)
 
 On the project interface, users can monitor information such as:
 

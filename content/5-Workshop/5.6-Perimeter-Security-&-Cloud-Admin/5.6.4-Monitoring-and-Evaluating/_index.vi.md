@@ -12,7 +12,7 @@ Sau khi hoàn tất việc cấu hình các cơ chế bảo mật, bước tiế
 
 Truy cập dịch vụ **AWS CloudTrail**, chọn **Create trail** và tiến hành tạo một Trail mới với tên **main-project-trail**.
 
-![](/images/5-Workshop/5.6-Perimeter-Security/image-10.png)
+![](/fcj-workshop/images/5-Workshop/5.6-Perimeter-Security-&-Cloud-Admin/image-10.png)
 
 CloudTrail sẽ tự động ghi nhận các thao tác quản trị, thay đổi cấu hình và các sự kiện phát sinh trên các dịch vụ AWS. Toàn bộ nhật ký (Audit Logs) sẽ được lưu trữ trong Amazon S3 để phục vụ việc theo dõi, kiểm tra và phân tích khi cần thiết.
 
@@ -22,7 +22,7 @@ Tiếp theo, triển khai **AWS Config** nhằm theo dõi liên tục trạng th
 
 Tại giao diện AWS Config, tiến hành cấu hình **Configuration Recorder** để ghi nhận mọi thay đổi về cấu hình của các dịch vụ AWS.
 
-![](/images/5-Workshop/5.6-Perimeter-Security/image-11.png)
+![](/fcj-workshop/images/5-Workshop/5.6-Perimeter-Security-&-Cloud-Admin/image-11.png)
 
 Sau khi Configuration Recorder được kích hoạt, AWS Config sẽ tự động theo dõi các thay đổi của tài nguyên và đánh giá mức độ tuân thủ dựa trên các Rule đã được thiết lập.
 
@@ -32,7 +32,7 @@ Sau khi hoàn tất cấu hình, kiểm tra kết quả đánh giá của các R
 
 Trong hệ thống, Rule **s3-bucket-public-read-prohibited** được sử dụng để kiểm tra việc ngăn chặn truy cập công khai đối với các Amazon S3 Bucket.
 
-![](/images/5-Workshop/5.6-Perimeter-Security/image-12.png)
+![](/fcj-workshop/images/5-Workshop/5.6-Perimeter-Security-&-Cloud-Admin/image-12.png)
 
 Kết quả hiển thị trạng thái **Compliant**, cho thấy các S3 Bucket đã đáp ứng yêu cầu bảo mật và không cho phép truy cập đọc công khai trái phép.
 
@@ -40,7 +40,7 @@ Kết quả hiển thị trạng thái **Compliant**, cho thấy các S3 Bucket 
 
 Cuối cùng, truy cập **AWS Config Dashboard** để theo dõi tổng quan tình trạng tuân thủ của toàn bộ tài nguyên trong hệ thống.
 
-![](/images/5-Workshop/5.6-Perimeter-Security/image-13.png)
+![](/fcj-workshop/images/5-Workshop/5.6-Perimeter-Security-&-Cloud-Admin/image-13.png)
 
 Dashboard cung cấp các thông tin như:
 

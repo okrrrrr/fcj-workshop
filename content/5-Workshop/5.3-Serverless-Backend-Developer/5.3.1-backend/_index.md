@@ -1,4 +1,4 @@
----
+﻿---
 title : "Preparing Backend Source Code and Creating DynamoDB"
 date : 2024-01-01
 weight : 1
@@ -12,23 +12,23 @@ First, prepare the system's backend source code. The backend is built using a se
 
 The source code is organized into **8 Lambda functions**, with each function handling a specific task to ensure the system is easy to manage, scale, and maintain.
 
-![](/images/5-Workshop/5.3-Serverless-Backend-Developer/image.png)
+![](/fcj-workshop/images/5-Workshop/5.3-Serverless-Backend-Developer/image.png)
 
 ### Preparing Backend Source
 
 Once the source code is ready, navigate to the previously created backend directory to package and deploy the code to AWS Lambda.
 
-![](/images/5-Workshop/5.3-Serverless-Backend-Developer/image-1.png)
+![](/fcj-workshop/images/5-Workshop/5.3-Serverless-Backend-Developer/image-1.png)
 
 ### Packaging Lambda Functions
 
 Next, package all Lambda functions into **.zip** files. Packaging enables AWS Lambda to accept and deploy each function independently.
 
-![](/images/5-Workshop/5.3-Serverless-Backend-Developer/image-2.png)
+![](/fcj-workshop/images/5-Workshop/5.3-Serverless-Backend-Developer/image-2.png)
 
 After running the script, the system automatically generates compressed files for each Lambda function.
 
-![](/images/5-Workshop/5.3-Serverless-Backend-Developer/image-3.png)
+![](/fcj-workshop/images/5-Workshop/5.3-Serverless-Backend-Developer/image-3.png)
 
 Each **.zip** file contains:
 
@@ -44,7 +44,7 @@ After preparing the backend source code, proceed to create an **Amazon DynamoDB*
 
 In the DynamoDB interface, select **Create table**, enter the table name, and configure the necessary parameters before creating the table.
 
-![](/images/5-Workshop/5.3-Serverless-Backend-Developer/image-4.png)
+![](/fcj-workshop/images/5-Workshop/5.3-Serverless-Backend-Developer/image-4.png)
 
 ### Creating a Global Secondary Index
 
@@ -52,7 +52,7 @@ Once the table has been successfully created, navigate to the **Indexes** tab an
 
 This index is used to search and query data based on **User ID**, helping to improve data retrieval performance during processing and result display.
 
-![](/images/5-Workshop/5.3-Serverless-Backend-Developer/image-5.png)
+![](/fcj-workshop/images/5-Workshop/5.3-Serverless-Backend-Developer/image-5.png)
 
 ### Completion
 

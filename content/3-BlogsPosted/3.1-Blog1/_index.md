@@ -1,4 +1,4 @@
----
+﻿---
 title: "Blog 1"
 date: 2024-01-01
 weight: 1
@@ -50,7 +50,7 @@ There are **2 types** of VPC Endpoints:
 ## Our Sandbox Architecture
 
 
-![VPC Endpoint Architecture](/images/3-Blog/blog1_vpc_endpoint.png)
+![VPC Endpoint Architecture](/fcj-workshop/images/3-Blog/blog1_vpc_endpoint.png)
 
 
 As shown above, here's the Sandbox network architecture our team designed:

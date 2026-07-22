@@ -1,4 +1,4 @@
----
+﻿---
 title : "Introduction"
 date : 2024-01-01 
 weight : 1 
@@ -26,4 +26,4 @@ This workshop will implement a cloud-based automated malware detection and analy
 
 + Build a secure hybrid connection between Amazon VPC and Amazon S3 using Amazon VPC Endpoint, allowing resources within the VPC to access AWS services via the internal network without going through the public internet.
 
-![Workshop Overview](/images/5-Workshop/5.1-Workshop-overview/diagram1.png)
+![Workshop Overview](/fcj-workshop/images/5-Workshop/5.1-Workshop-overview/diagram1.png)

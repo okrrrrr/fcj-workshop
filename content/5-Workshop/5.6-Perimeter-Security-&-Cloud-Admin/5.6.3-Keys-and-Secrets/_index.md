@@ -12,7 +12,7 @@ After configuring AWS WAF, the next step is to deploy **AWS Secrets Manager** to
 
 Access the **AWS Secrets Manager** service, select **Store a new secret**, and proceed to create a new Secret.
 
-![](/images/5-Workshop/5.6-Perimeter-Security/image-8.png)
+![](/fcj-workshop/images/5-Workshop/5.6-Perimeter-Security-&-Cloud-Admin/image-8.png)
 
 Store critical information within the Secret, such as:
 
@@ -28,7 +28,7 @@ After creating the Secret, proceed to configure **AWS Key Management Service (AW
 
 Create a **Customer Managed Key (CMK)** named **kms-project-key**.
 
-![](/images/5-Workshop/5.6-Perimeter-Security/image-9.png)
+![](/fcj-workshop/images/5-Workshop/5.6-Perimeter-Security-&-Cloud-Admin/image-9.png)
 
 This encryption key is used to:
 

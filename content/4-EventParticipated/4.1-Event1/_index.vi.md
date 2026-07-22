@@ -1,4 +1,4 @@
----
+﻿---
 title: "Event 1"
 date: 2026-05-23
 weight: 1
@@ -92,6 +92,6 @@ Chia sẻ của Team VIB về hành trình 36 giờ hackathon đã truyền cả
 
 Hình ảnh thực tế tại buổi FCAJ Community Day - các bạn tham dự đang theo dõi phiên trình bày "Non-Determinism of Deterministic LLM Settings" của diễn giả Duc Dao:
 
-![FCAJ Community Day](/images/fcai-community-day.jpg)
+![FCAJ Community Day](/fcj-workshop/images/fcai-community-day.jpg)
 
 > Tổng thể, sự kiện FCAJ Community Day không chỉ cung cấp kiến thức kỹ thuật về AI và Cloud mà còn giúp em mở rộng network và hiểu rõ hơn về xu hướng công nghệ hiện tại. Em sẽ áp dụng những gì đã học được vào việc học tập và phát triển sự nghiệp trong tương lai.

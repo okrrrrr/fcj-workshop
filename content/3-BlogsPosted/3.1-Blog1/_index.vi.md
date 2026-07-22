@@ -1,4 +1,4 @@
----
+﻿---
 title: "Blog 1"
 date: 2024-01-01
 weight: 1
@@ -50,7 +50,7 @@ Có **2 loại** VPC Endpoint:
 ## Kiến trúc Sandbox của nhóm mình
 
 
-![VPC Endpoint Architecture](/images/3-Blog/blog1_vpc_endpoint.png)
+![VPC Endpoint Architecture](/fcj-workshop/images/3-Blog/blog1_vpc_endpoint.png)
 
 
 Như hình trên, đây là kiến trúc mạng Sandbox mà nhóm mình thiết kế:

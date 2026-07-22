@@ -1,4 +1,4 @@
----
+﻿---
 title : "Web Frontend Developer"
 date : 2024-01-01
 weight : 2
@@ -14,4 +14,4 @@ pre : " <b> 5.2. </b> "
     + 5.2.1. Structuring the React Frontend Project
     + 5.2.2. Configuring AWS Services for the Frontend
 
-![Web Frontend](/images/5-Workshop/5.2-Web-Frontend-Developer/image.png)
+![Web Frontend](/fcj-workshop/images/5-Workshop/5.2-Web-Frontend-Developer/image.png)

@@ -1,4 +1,4 @@
----
+﻿---
 title : "Configuring S3, Identity Pool, and IAM Role"
 date : 2024-01-01
 weight : 2
@@ -12,7 +12,7 @@ Navigate to the **Amazon S3** service in the AWS Management Console.
 
 On the S3 management page, select **Create bucket** to start creating a new bucket for storing application files.
 
-![](/images/5-Workshop/5.2-Web-Frontend-Developer/image-9.png)
+![](/fcj-workshop/images/5-Workshop/5.2-Web-Frontend-Developer/image-9.png)
 
 ### Configuring S3 Bucket Details
 
@@ -26,7 +26,7 @@ On the bucket creation page, perform the following steps:
 
 The bucket name must be globally unique across the entire Amazon S3 system.
 
-![](/images/5-Workshop/5.2-Web-Frontend-Developer/image-10.png)
+![](/fcj-workshop/images/5-Workshop/5.2-Web-Frontend-Developer/image-10.png)
 
 
 ### Configuring CORS for the S3 Bucket
@@ -41,7 +41,7 @@ After successfully creating the bucket, select the newly created bucket and perf
 
 Configuring CORS enables the browser to allow the frontend application to send requests to Amazon S3 from a different domain or port.
 
-![](/images/5-Workshop/5.2-Web-Frontend-Developer/image-11.png)
+![](/fcj-workshop/images/5-Workshop/5.2-Web-Frontend-Developer/image-11.png)
 
 
 ### Creating a Cognito Identity Pool
@@ -50,7 +50,7 @@ Return to the Amazon Cognito service and navigate to the **Identity pools** mana
 
 Select the option to create a new Identity Pool to grant users access to AWS resources after they log in.
 
-![](/images/5-Workshop/5.2-Web-Frontend-Developer/image-12.png)
+![](/fcj-workshop/images/5-Workshop/5.2-Web-Frontend-Developer/image-12.png)
 
 
 ### Configuring Access Permissions for the Identity Pool
@@ -64,7 +64,7 @@ During the Identity Pool configuration step, perform the following actions:
 * Select the corresponding **App Client ID**.
 * Leave the other settings as-is unless changes are required.
 
-![](/images/5-Workshop/5.2-Web-Frontend-Developer/image-13.png)
+![](/fcj-workshop/images/5-Workshop/5.2-Web-Frontend-Developer/image-13.png)
 
 
 ### Configuring the IAM Role for the Identity Pool
@@ -73,7 +73,7 @@ After linking the User Pool and App Client, click **Next** to move to the access
 
 At this stage, AWS will either create an IAM Role or allow you to select one for authenticated users.
 
-![](/images/5-Workshop/5.2-Web-Frontend-Developer/image-14.png)
+![](/fcj-workshop/images/5-Workshop/5.2-Web-Frontend-Developer/image-14.png)
 
 
 ### Naming the Identity Pool
@@ -85,7 +85,7 @@ Then:
 * Review the configured information.
 * Click **Next** to proceed.
 
-![](/images/5-Workshop/5.2-Web-Frontend-Developer/image-15.png)
+![](/fcj-workshop/images/5-Workshop/5.2-Web-Frontend-Developer/image-15.png)
 
 
 ### Reviewing and Creating the Identity Pool
@@ -100,7 +100,7 @@ On the confirmation page, review the following details:
 
 If the information is correct, proceed to create the Identity Pool.
 
-![](/images/5-Workshop/5.2-Web-Frontend-Developer/image-16.png)
+![](/fcj-workshop/images/5-Workshop/5.2-Web-Frontend-Developer/image-16.png)
 
 
 Once successfully created, copy and save the **Identity Pool ID** value to update the `AWS.ts` file.
@@ -111,7 +111,7 @@ Navigate to the **Identity and Access Management (IAM)** service in the AWS Mana
 
 In the IAM interface, select **Roles** to view the list of existing roles.
 
-![](/images/5-Workshop/5.2-Web-Frontend-Developer/image-17.png)
+![](/fcj-workshop/images/5-Workshop/5.2-Web-Frontend-Developer/image-17.png)
 
 
 ### Selecting the Identity Pool IAM Role
@@ -122,10 +122,10 @@ The role name typically includes the Identity Pool name and a phrase indicating 
 
 Select the role to view and configure its permissions.
 
-![](/images/5-Workshop/5.2-Web-Frontend-Developer/image-18.png)
+![](/fcj-workshop/images/5-Workshop/5.2-Web-Frontend-Developer/image-18.png)
 
 
-![](/images/5-Workshop/5.2-Web-Frontend-Developer/image-19.png)
+![](/fcj-workshop/images/5-Workshop/5.2-Web-Frontend-Developer/image-19.png)
 
 
 ### Adding Amazon S3 Access Permissions
@@ -136,7 +136,7 @@ On the IAM role details page, perform the following steps:
 * Select **Add permissions**.
 * Select **Attach policies**.
 
-![](/images/5-Workshop/5.2-Web-Frontend-Developer/image-20.png)
+![](/fcj-workshop/images/5-Workshop/5.2-Web-Frontend-Developer/image-20.png)
 
 
 ### Attaching the AmazonS3FullAccess Policy
@@ -152,7 +152,7 @@ Then proceed to:
 * Check the box for the **AmazonS3FullAccess** policy.
 * Select **Attach policies** to assign the permission to the IAM role.
 
-![](/images/5-Workshop/5.2-Web-Frontend-Developer/image-21.png)
+![](/fcj-workshop/images/5-Workshop/5.2-Web-Frontend-Developer/image-21.png)
 
 
 ### Verifying the Configuration

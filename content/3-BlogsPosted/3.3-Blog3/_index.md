@@ -1,4 +1,4 @@
----
+﻿---
 title: "Blog 3"
 date: 2024-01-01
 weight: 1
@@ -39,7 +39,7 @@ But Config only **detects** — it doesn't fix anything. To automatically remedi
 ## Auto-Remediation Architecture
 
 
-![Auto-Remediation Architecture](/images/3-Blog/blog3_auto_remediation.png)
+![Auto-Remediation Architecture](/fcj-workshop/images/3-Blog/blog3_auto_remediation.png)
 
 
 Here's how the flow works:

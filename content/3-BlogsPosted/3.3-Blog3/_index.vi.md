@@ -1,4 +1,4 @@
----
+﻿---
 title: "Blog 3"
 date: 2024-01-01
 weight: 1
@@ -39,7 +39,7 @@ Nhưng Config chỉ **phát hiện** — nó không tự sửa. Để tự độ
 ## Kiến trúc Auto-Remediation
 
 
-![Auto-Remediation Architecture](/images/3-Blog/blog3_auto_remediation.png)
+![Auto-Remediation Architecture](/fcj-workshop/images/3-Blog/blog3_auto_remediation.png)
 
 
 Flow hoạt động:

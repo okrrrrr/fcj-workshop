@@ -1,4 +1,4 @@
----
+﻿---
 title : "Preparing the CI/CD Environment"
 date : 2024-01-01
 weight : 2
@@ -12,7 +12,7 @@ After completing the Amazon S3 and Lifecycle Rule configuration, the next step i
 
 Create the **buildspec.yml** file in the project root directory and configure environment variables, the runtime version, and the processing stages.
 
-![](/images/5-Workshop/5.4-Data/image-9.png)
+![](/fcj-workshop/images/5-Workshop/5.4-Data/image-9.png)
 
 In the **buildspec.yml** file, the build process is divided into key stages:
 
@@ -33,7 +33,7 @@ This stage performs tasks such as:
 - Deploying the stack to AWS CloudFormation.
 - Storing artifacts for use in subsequent steps of the CI/CD pipeline.
 
-![](/images/5-Workshop/5.4-Data/image-10.png)
+![](/fcj-workshop/images/5-Workshop/5.4-Data/image-10.png)
 
 ### Pushing Source Code to GitHub
 
@@ -41,7 +41,7 @@ Once the **buildspec.yml** file is finalized, save your project changes and sync
 
 Commit the changes and use the **git push** command to update the repository from your development machine to GitHub.
 
-![](/images/5-Workshop/5.4-Data/image-11.png)
+![](/fcj-workshop/images/5-Workshop/5.4-Data/image-11.png)
 
 Storing source code on GitHub enables AWS CodeBuild and AWS CodePipeline to automatically fetch the latest version of the project whenever changes occur, laying the groundwork for the Continuous Integration and Continuous Deployment processes in the subsequent steps.
 

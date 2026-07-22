@@ -1,4 +1,4 @@
----
+﻿---
 title : "Xây dựng Frontend React và Amazon Cognito"
 date : 2024-01-01
 weight : 1
@@ -12,7 +12,7 @@ pre : " <b> 5.2.1 </b> "
 
 Ứng dụng Frontend sử dụng AWS SDK để kết nối và tương tác với các dịch vụ AWS như Amazon Cognito, Amazon S3 và Cognito Identity Pool.
 
-![](/images/5-Workshop/5.2-Web-Frontend-Developer/image.png)
+![](/fcj-workshop/images/5-Workshop/5.2-Web-Frontend-Developer/image.png)
 
 ### Tạo file AWS.ts để cấu hình AWS Services
 
@@ -28,13 +28,13 @@ Các thông tin cấu hình thường bao gồm:
 
 Việc quản lý cấu hình trong một file riêng giúp thuận tiện khi cập nhật thông tin và hạn chế việc khai báo lặp lại trong nhiều thành phần của ứng dụng.
 
-![](/images/5-Workshop/5.2-Web-Frontend-Developer/image-1.png)
+![](/fcj-workshop/images/5-Workshop/5.2-Web-Frontend-Developer/image-1.png)
 
 ### Truy cập AWS Management Console
 
 Truy cập AWS Management Console và đăng nhập bằng tài khoản AWS được cấp để bắt đầu quá trình cấu hình các dịch vụ phục vụ cho ứng dụng Frontend.
 
-![](/images/5-Workshop/5.2-Web-Frontend-Developer/image-2.png)
+![](/fcj-workshop/images/5-Workshop/5.2-Web-Frontend-Developer/image-2.png)
 
 ### Tìm kiếm dịch vụ Amazon Cognito
 
@@ -42,7 +42,7 @@ Tại giao diện AWS Management Console, nhập từ khóa `Cognito` vào thanh
 
 Chọn dịch vụ **Amazon Cognito** trong danh sách kết quả để truy cập trang quản lý xác thực người dùng.
 
-![](/images/5-Workshop/5.2-Web-Frontend-Developer/image-3.png)
+![](/fcj-workshop/images/5-Workshop/5.2-Web-Frontend-Developer/image-3.png)
 
 ### Tạo User Pool mới
 
@@ -50,7 +50,7 @@ Tại trang quản lý Amazon Cognito, chọn chức năng **Create user pool** 
 
 User Pool được sử dụng để quản lý thông tin đăng ký, đăng nhập và xác thực người dùng cho ứng dụng React.
 
-![](/images/5-Workshop/5.2-Web-Frontend-Developer/image-4.png)
+![](/fcj-workshop/images/5-Workshop/5.2-Web-Frontend-Developer/image-4.png)
 
 ### Cấu hình User Directory
 
@@ -65,7 +65,7 @@ Tại bước tạo User Pool, thực hiện các cấu hình sau:
 * Kiểm tra lại các thông tin đã cấu hình.
 * Chọn chức năng tạo User Pool để hoàn tất.
 
-![](/images/5-Workshop/5.2-Web-Frontend-Developer/image-5.png)
+![](/fcj-workshop/images/5-Workshop/5.2-Web-Frontend-Developer/image-5.png)
 
 ### Lưu User Pool ID
 
@@ -73,7 +73,7 @@ Sau khi User Pool được tạo thành công, hệ thống chuyển đến tran
 
 Tại trang **Overview**, sao chép và lưu lại giá trị **User Pool ID**. Thông tin này sẽ được sử dụng trong file `AWS.ts` để kết nối ứng dụng React với Amazon Cognito.
 
-![](/images/5-Workshop/5.2-Web-Frontend-Developer/image-6.png)
+![](/fcj-workshop/images/5-Workshop/5.2-Web-Frontend-Developer/image-6.png)
 
 ### Lấy App Client ID
 
@@ -85,9 +85,9 @@ Trong giao diện quản lý User Pool, thực hiện các bước sau:
 * Sao chép và lưu lại giá trị **Client ID**.
 * Nhấn vào tên App Client để xem thông tin chi tiết.
 
-![](/images/5-Workshop/5.2-Web-Frontend-Developer/image-7.png)
+![](/fcj-workshop/images/5-Workshop/5.2-Web-Frontend-Developer/image-7.png)
 
-![](/images/5-Workshop/5.2-Web-Frontend-Developer/image-8.png)
+![](/fcj-workshop/images/5-Workshop/5.2-Web-Frontend-Developer/image-8.png)
 
 ### Chỉnh sửa App Client
 

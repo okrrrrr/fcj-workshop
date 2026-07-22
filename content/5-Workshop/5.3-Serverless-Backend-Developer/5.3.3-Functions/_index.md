@@ -1,4 +1,4 @@
----
+﻿---
 title : "Building AWS Step Functions"
 date : 2024-01-01
 weight : 3
@@ -10,7 +10,7 @@ pre : " <b> 5.3.3. </b> "
 
 After configuring Amazon SQS and the AWS Lambda functions, the next step is to create an **IAM Role** for **AWS Step Functions**. This IAM Role grants the necessary permissions for Step Functions to invoke Lambda functions and access Amazon DynamoDB while orchestrating the workflow.
 
-![](/images/5-Workshop/5.3-Serverless-Backend-Developer/image-16.png)
+![](/fcj-workshop/images/5-Workshop/5.3-Serverless-Backend-Developer/image-16.png)
 
 The IAM Role is granted necessary permissions such as:
 
@@ -26,11 +26,11 @@ Once created, the IAM Role will be assigned to the State Machine in AWS Step Fun
 
 Next, navigate to the **AWS Step Functions** service and create a new **State Machine** to orchestrate the entire file processing workflow.
 
-![](/images/5-Workshop/5.3-Serverless-Backend-Developer/image-17.png)
+![](/fcj-workshop/images/5-Workshop/5.3-Serverless-Backend-Developer/image-17.png)
 
 After creating the State Machine, configure the states and link them to their corresponding Lambda functions.
 
-![](/images/5-Workshop/5.3-Serverless-Backend-Developer/image-18.png)
+![](/fcj-workshop/images/5-Workshop/5.3-Serverless-Backend-Developer/image-18.png)
 
 The system workflow consists of the following key steps:
 
@@ -58,7 +58,7 @@ Configuring the ARN enables these Lambda functions to trigger the State Machine 
 
 After completing the configuration, verify the entire workflow within AWS Step Functions to ensure that states are correctly linked and execute in the proper sequence.
 
-![](/images/5-Workshop/5.3-Serverless-Backend-Developer/image-19.png)
+![](/fcj-workshop/images/5-Workshop/5.3-Serverless-Backend-Developer/image-19.png)
 
 The workflow operates in the following sequence:
 

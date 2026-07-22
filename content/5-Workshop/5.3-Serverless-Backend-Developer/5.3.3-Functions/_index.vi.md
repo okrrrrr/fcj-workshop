@@ -1,4 +1,4 @@
----
+﻿---
 title : "Xây dựng AWS Step Functions"
 date : 2024-01-01
 weight : 3
@@ -10,7 +10,7 @@ pre : " <b> 5.3.3. </b> "
 
 Sau khi hoàn tất cấu hình Amazon SQS và các AWS Lambda Function, bước tiếp theo là tạo **IAM Role** dành cho **AWS Step Functions**. IAM Role này sẽ cấp quyền để Step Functions có thể gọi các Lambda Function và truy cập vào Amazon DynamoDB trong quá trình điều phối workflow.
 
-![](/images/5-Workshop/5.3-Serverless-Backend-Developer/image-16.png)
+![](/fcj-workshop/images/5-Workshop/5.3-Serverless-Backend-Developer/image-16.png)
 
 IAM Role được cấp các quyền cần thiết như:
 
@@ -26,11 +26,11 @@ Sau khi hoàn thành, IAM Role sẽ được gán cho State Machine trong AWS St
 
 Tiếp theo, truy cập dịch vụ **AWS Step Functions** và tạo một **State Machine** mới để điều phối toàn bộ quy trình xử lý tệp.
 
-![](/images/5-Workshop/5.3-Serverless-Backend-Developer/image-17.png)
+![](/fcj-workshop/images/5-Workshop/5.3-Serverless-Backend-Developer/image-17.png)
 
 Sau khi tạo State Machine, tiến hành cấu hình các trạng thái (States) và liên kết với các Lambda Function tương ứng.
 
-![](/images/5-Workshop/5.3-Serverless-Backend-Developer/image-18.png)
+![](/fcj-workshop/images/5-Workshop/5.3-Serverless-Backend-Developer/image-18.png)
 
 Workflow của hệ thống bao gồm các bước chính:
 
@@ -58,7 +58,7 @@ Việc cấu hình ARN giúp các Lambda Function có thể khởi chạy State 
 
 Sau khi hoàn tất cấu hình, tiến hành kiểm tra lại toàn bộ Workflow trong AWS Step Functions để đảm bảo các trạng thái đã được liên kết đúng và có thể thực hiện theo đúng thứ tự.
 
-![](/images/5-Workshop/5.3-Serverless-Backend-Developer/image-19.png)
+![](/fcj-workshop/images/5-Workshop/5.3-Serverless-Backend-Developer/image-19.png)
 
 Workflow sẽ hoạt động theo trình tự sau:
 

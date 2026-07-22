@@ -12,7 +12,7 @@ Sau khi hoàn tất việc cấu hình AWS WAF, bước tiếp theo là triển 
 
 Truy cập dịch vụ **AWS Secrets Manager**, chọn **Store a new secret** và tiến hành tạo một Secret mới.
 
-![](/images/5-Workshop/5.6-Perimeter-Security/image-8.png)
+![](/fcj-workshop/images/5-Workshop/5.6-Perimeter-Security-&-Cloud-Admin/image-8.png)
 
 Trong Secret, lưu trữ các thông tin quan trọng như:
 
@@ -28,7 +28,7 @@ Sau khi tạo Secret, tiếp tục cấu hình **AWS Key Management Service (AWS
 
 Tạo một **Customer Managed Key (CMK)** với tên **kms-project-key**.
 
-![](/images/5-Workshop/5.6-Perimeter-Security/image-9.png)
+![](/fcj-workshop/images/5-Workshop/5.6-Perimeter-Security-&-Cloud-Admin/image-9.png)
 
 Khóa mã hóa này được sử dụng để:
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Blog 2"
 date: 2024-01-01
 weight: 1
@@ -41,7 +41,7 @@ Nói cách khác: Lambda tạo ra một "vé vào cửa có thời hạn" cho cl
 ## Flow hoạt động
 
 
-![Presigned URL Flow](/images/3-Blog/blog2_presigned_url.png)
+![Presigned URL Flow](/fcj-workshop/images/3-Blog/blog2_presigned_url.png)
 
 
 Flow upload trong hệ thống của nhóm mình hoạt động như sau:

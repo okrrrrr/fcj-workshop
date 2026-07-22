@@ -19,4 +19,4 @@ Nội dung của phần này được chia thành bốn nội dung chính như s
 - **5.6.3. Quản lý khóa mã hóa và thông tin bí mật:** Sử dụng AWS Secrets Manager để lưu trữ thông tin nhạy cảm và AWS KMS để quản lý khóa mã hóa dữ liệu.
 - **5.6.4. Giám sát và đánh giá tuân thủ hệ thống:** Cấu hình AWS CloudTrail và AWS Config để ghi nhận nhật ký hoạt động, theo dõi thay đổi tài nguyên và đánh giá mức độ tuân thủ các chính sách bảo mật.
 
-![Perimeter Security & Cloud Admin](/images/5-Workshop/5.6-Perimeter-Security/image.png)
+![Perimeter Security & Cloud Admin](/fcj-workshop/images/5-Workshop/5.6-Perimeter-Security-&-Cloud-Admin/image.png)

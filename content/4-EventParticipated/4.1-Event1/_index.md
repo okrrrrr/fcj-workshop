@@ -1,4 +1,4 @@
----
+﻿---
 title: "Event 1"
 date: 2026-05-23
 weight: 1
@@ -92,6 +92,6 @@ Team VIB's sharing about their 36-hour hackathon journey was very inspiring. It 
 
 Actual photos from FCAJ Community Day - attendees watching the "Non-Determinism of Deterministic LLM Settings" session by Duc Dao:
 
-![FCAJ Community Day](/images/fcai-community-day.jpg)
+![FCAJ Community Day](/fcj-workshop/images/fcai-community-day.jpg)
 
 > Overall, the FCAJ Community Day event not only provided technical knowledge about AI and Cloud but also helped me expand my network and better understand current technology trends. I will apply what I learned to my studies and future career development.

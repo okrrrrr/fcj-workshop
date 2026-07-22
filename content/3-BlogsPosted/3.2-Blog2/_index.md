@@ -1,4 +1,4 @@
----
+﻿---
 title: "Blog 2"
 date: 2024-01-01
 weight: 1
@@ -41,7 +41,7 @@ In other words: Lambda creates a "time-limited entry pass" for the client. The c
 ## How It Works
 
 
-![Presigned URL Flow](/images/3-Blog/blog2_presigned_url.png)
+![Presigned URL Flow](/fcj-workshop/images/3-Blog/blog2_presigned_url.png)
 
 
 Here's how the upload flow works in our system:

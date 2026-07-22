@@ -12,13 +12,13 @@ Sau khi hoàn tất việc cấu hình IAM OIDC Provider và GitHub Actions, bư
 
 Truy cập dịch vụ **AWS WAF & Shield**, chọn **Create web ACL** để khởi tạo một **Web Access Control List (Web ACL)** mới. Web ACL sẽ được sử dụng để kiểm soát và lọc các yêu cầu gửi đến **Amazon API Gateway**.
 
-![](/images/5-Workshop/5.6-Perimeter-Security/image-5.png)
+![](/fcj-workshop/images/5-Workshop/5.6-Perimeter-Security-&-Cloud-Admin/image-5.png)
 
 ### Hoàn tất tạo Web ACL
 
 Sau khi cấu hình các thông tin cần thiết như tên, Region và tài nguyên cần bảo vệ, tiến hành tạo Web ACL.
 
-![](/images/5-Workshop/5.6-Perimeter-Security/image-6.png)
+![](/fcj-workshop/images/5-Workshop/5.6-Perimeter-Security-&-Cloud-Admin/image-6.png)
 
 Sau khi được tạo thành công, Web ACL sẽ được liên kết với API Gateway để kiểm tra và đánh giá tất cả các yêu cầu truy cập trước khi chuyển đến Backend.
 
@@ -26,7 +26,7 @@ Sau khi được tạo thành công, Web ACL sẽ được liên kết với API
 
 Tiếp theo, tạo một **Rate-based Rule** nhằm giới hạn số lượng yêu cầu mà một địa chỉ IP có thể gửi đến API Gateway trong một khoảng thời gian nhất định.
 
-![](/images/5-Workshop/5.6-Perimeter-Security/image-7.png)
+![](/fcj-workshop/images/5-Workshop/5.6-Perimeter-Security-&-Cloud-Admin/image-7.png)
 
 Trong cấu hình này, thiết lập hành động **Block** đối với các địa chỉ IP gửi quá **100 yêu cầu trong vòng 5 phút**. Quy tắc này giúp hạn chế các hành vi gửi yêu cầu với tần suất cao bất thường, góp phần giảm thiểu nguy cơ tấn công từ chối dịch vụ (DoS) hoặc Spam API.
 
